@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/hp/AndroidStudioProjects/DrawerNavigation/app/src/main/res/drawable/border.xml" value="0.1" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/DrawerNavigation/app/src/main/res/layout/activity_home.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/DrawerNavigation/app/src/main/res/layout/activity_login.xml" value="0.17083333333333334" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/DrawerNavigation/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/DrawerNavigation/app/src/main/res/layout/activity_register.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/DrawerNavigation/app/src/main/res/layout/activity_update_todo.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/DrawerNavigation/app/src/main/res/layout/header_nav.xml" value="0.1" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/DrawerNavigation/app/src/main/res/layout/todo_row.xml" value="0.1" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/DrawerNavigation/app/src/main/res/menu/nav_menu.xml" value="0.1" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/DrawerNavigation/app/src/main/res/menu/nav_menu1.xml" value="0.14407866609662248" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

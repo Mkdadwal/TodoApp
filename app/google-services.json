@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "578902739330",
+    "firebase_url": "https://mynewproject113-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "mynewproject113",
+    "storage_bucket": "mynewproject113.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:578902739330:android:5536e650a5d72e1cb2679b",
+        "android_client_info": {
+          "package_name": "com.example.drawernavigation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "578902739330-2lgqghqv32qn00dohoimgojirl7kjgh2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAE9pUmMeWDA88wfdCi1pY8Cga4qoVZHpM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "578902739330-2lgqghqv32qn00dohoimgojirl7kjgh2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
