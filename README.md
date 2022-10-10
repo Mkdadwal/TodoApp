@@ -1,11 +1,13 @@
 # TodoApp
 This is a basic Todo app where you can add a task. In this app you can update or delete the task as per your needs.
 
-## Language :- Kotlin
-## Framework :- Android Studio
+### Language :- Kotlin
+### Framework :- Android Studio
 
 ## Basic HomePage of the Application
-![IMG-20221009-WA0016](https://user-images.githubusercontent.com/92742868/194865292-eae10c72-aa09-4ca3-a913-a294fb858c33.jpg) ![IMG-20221009-WA0019](https://user-images.githubusercontent.com/92742868/194867562-2625dfb8-9afe-4463-82c8-bf31cd5a948d.jpg)
+![IMG-20221009-WA0016](https://user-images.githubusercontent.com/92742868/194869551-3e03dce4-faf8-45b9-978f-c0a7966af9be.jpg)  ![IMG-20221009-WA0019](https://user-images.githubusercontent.com/92742868/194869586-35a8f435-2ff7-446c-a202-f2a8c33c214a.jpg)
+
+
 
 ## Login And Register Page 
 when any user opens the application it ask for Login.
