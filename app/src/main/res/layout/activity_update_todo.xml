@@ -6,12 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".UpdateTodoActivity">
 
-    <EditText
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/edtUpdateTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
+        android:background="@drawable/border"
         android:padding="15dp"
         android:hint="Name"
         android:inputType="textPersonName"
@@ -20,12 +21,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/edtUpdateAction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
+        android:background="@drawable/border"
         android:padding="15dp"
         android:hint="Action"
         android:inputType="textPersonName"
@@ -40,6 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:text="Update"
+        
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.147"
         app:layout_constraintStart_toStartOf="parent"

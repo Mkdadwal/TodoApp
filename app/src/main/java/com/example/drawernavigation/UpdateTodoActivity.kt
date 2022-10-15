@@ -35,6 +35,7 @@ class UpdateTodoActivity : AppCompatActivity() {
         edtUpdateAction.setText(task).toString()
 //        Toast.makeText(this,"Title : ${title}",Toast.LENGTH_SHORT).show()
         update.setOnClickListener {
+            update.setBackgroundColor(Color.GREEN)
             title=edtUpdateTitle.text.toString()
             task=edtUpdateAction.text.toString()
             val userUpdate = mutableMapOf<String,Any>()
@@ -55,6 +56,7 @@ class UpdateTodoActivity : AppCompatActivity() {
 
 
         remove.setOnClickListener {
+            remove.setBackgroundColor(Color.RED)
             edtUpdateTitle.setText("")
             edtUpdateAction.setText("")
             refTodo.child(id).removeValue().addOnCompleteListener { mytask ->
