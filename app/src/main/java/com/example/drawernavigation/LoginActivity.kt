@@ -10,9 +10,7 @@ import kotlin.math.log
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
-    lateinit var username : EditText
-    lateinit var password : EditText
-    lateinit var login : Button
+
     lateinit var regex : Regex
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
