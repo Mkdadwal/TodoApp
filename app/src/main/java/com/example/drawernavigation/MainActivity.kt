@@ -9,9 +9,12 @@ import android.widget.Button
 import android.widget.ListView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
+import com.example.drawernavigation.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
     var todo = ArrayList<Todo>()
     lateinit var drawerLayout : DrawerLayout
     lateinit var navigationView : NavigationView
@@ -33,17 +36,17 @@ class MainActivity : AppCompatActivity() {
         //for menu
         when(item.itemId){
             R.id.add -> {
-                var intent = Intent(this@MainActivity,AddTodoActivity::class.java)
+                val intent = Intent(this@MainActivity,AddTodoActivity::class.java)
                 startActivity(intent)
                 //Toast.makeText(applicationContext,"Login",Toast.LENGTH_SHORT).show()
             }
             R.id.login -> {
-                var intent = Intent(this@MainActivity,LoginActivity::class.java)
+                val intent = Intent(this@MainActivity,LoginActivity::class.java)
                 startActivity(intent)
                 //Toast.makeText(applicationContext,"Login",Toast.LENGTH_SHORT).show()
             }
             R.id.register -> {
-                var intent = Intent(this@MainActivity,RegisterActivity::class.java)
+                val intent = Intent(this@MainActivity,RegisterActivity::class.java)
                 startActivity(intent)
                 //Toast.makeText(applicationContext,"Login",Toast.LENGTH_SHORT).show()
             }
@@ -53,7 +56,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         //Button click GetRecord
 
@@ -67,27 +72,25 @@ class MainActivity : AppCompatActivity() {
 //            listView.adapter = TodoAdapter(this@MainActivity, R.layout.todo_row, todo)
 //        }
         //Navigation View
-        drawerLayout = findViewById(R.id.drawerLayout)
-        navigationView = findViewById(R.id.navigationView)
-        toggle = ActionBarDrawerToggle(this@MainActivity,drawerLayout,R.string.open,R.string.close)
-        drawerLayout.addDrawerListener(toggle)
+        toggle = ActionBarDrawerToggle(this@MainActivity,binding.drawerLayout,R.string.open,R.string.close)
+        binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         // to activate the menu item of the navigation view
-        navigationView.setNavigationItemSelectedListener {
+        binding.navigationView.setNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.login -> {
-                    var intent = Intent(this@MainActivity, LoginActivity::class.java)
+                    val intent = Intent(this@MainActivity, LoginActivity::class.java)
                     startActivity(intent)
                     //Toast.makeText(this@MainActivity,"Login",Toast.LENGTH_SHORT).show()
                 }
                 R.id.register -> {
-                    var intent = Intent(this@MainActivity, RegisterActivity::class.java)
+                    val intent = Intent(this@MainActivity, RegisterActivity::class.java)
                     startActivity(intent)
                     //Toast.makeText(this@MainActivity,"Register",Toast.LENGTH_SHORT).show()
                 }
                 R.id.add -> {
-                    var intent = Intent(this@MainActivity, AddTodoActivity::class.java)
+                    val intent = Intent(this@MainActivity, AddTodoActivity::class.java)
                     startActivity(intent)
                     //Toast.makeText(this@MainActivity,"Profile",Toast.LENGTH_SHORT).show()
                 }

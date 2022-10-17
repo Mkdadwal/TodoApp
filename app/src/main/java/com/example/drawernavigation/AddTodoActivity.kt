@@ -17,7 +17,6 @@ class AddTodoActivity : AppCompatActivity() {
     google.service.json file and from that we will get the path where database is located*/
     val refTodo : DatabaseReference = dataBase.reference.child("Todo") //creates a table
 
-
     //Navigation
 
     var arrTodo = ArrayList<TodoModel>()
@@ -45,17 +44,17 @@ class AddTodoActivity : AppCompatActivity() {
         }
         when(item.itemId){
             R.id.login -> {
-                var intent = Intent(this@AddTodoActivity,LoginActivity::class.java)
+                val intent = Intent(this@AddTodoActivity,LoginActivity::class.java)
                 startActivity(intent)
                 //Toast.makeText(applicationContext,"Login",Toast.LENGTH_SHORT).show()
             }
             R.id.add -> {
-                var intent = Intent(this@AddTodoActivity,MainActivity::class.java)
+                val intent = Intent(this@AddTodoActivity,MainActivity::class.java)
                 startActivity(intent)
                 //Toast.makeText(applicationContext,"Profile", Toast.LENGTH_SHORT).show()
             }
             R.id.register -> {
-                var intent = Intent(this@AddTodoActivity,RegisterActivity::class.java)
+                val intent = Intent(this@AddTodoActivity,RegisterActivity::class.java)
                 startActivity(intent)
                 //Toast.makeText(applicationContext,"Register",Toast.LENGTH_SHORT).show()
             }
@@ -137,17 +136,17 @@ class AddTodoActivity : AppCompatActivity() {
         navigationView.setNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.login -> {
-                    var intent = Intent(this@AddTodoActivity, LoginActivity::class.java)
+                    val intent = Intent(this@AddTodoActivity, LoginActivity::class.java)
                     startActivity(intent)
                     //Toast.makeText(this@MainActivity,"Login",Toast.LENGTH_SHORT).show()
                 }
                 R.id.register -> {
-                    var intent = Intent(this@AddTodoActivity, RegisterActivity::class.java)
+                    val intent = Intent(this@AddTodoActivity, RegisterActivity::class.java)
                     startActivity(intent)
                     //Toast.makeText(this@MainActivity,"Register",Toast.LENGTH_SHORT).show()
                 }
                 R.id.add -> {
-                    var intent = Intent(this@AddTodoActivity, MainActivity::class.java)
+                    val intent = Intent(this@AddTodoActivity, MainActivity::class.java)
                     startActivity(intent)
                     //Toast.makeText(this@AddTodoActivity,"Profile",Toast.LENGTH_SHORT).show()
                 }

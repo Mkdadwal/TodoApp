@@ -5,22 +5,22 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.example.drawernavigation.databinding.ActivityLoginBinding
 import kotlin.math.log
 
 class LoginActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityLoginBinding
     lateinit var username : EditText
     lateinit var password : EditText
     lateinit var login : Button
     lateinit var regex : Regex
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
-        username = findViewById(R.id.username)
-        password = findViewById(R.id.password)
-        login = findViewById(R.id.btnLogin)
-        login.setOnClickListener {
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.btnLogin.setOnClickListener {
             regex = Regex("""\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}""")
-            if(android.util.Patterns.EMAIL_ADDRESS.matcher(username.text).matches()){
+            if(android.util.Patterns.EMAIL_ADDRESS.matcher(binding.username.text!!).matches()){
                 Toast.makeText(this,"Login Successfull", Toast.LENGTH_SHORT).show()
             }
             else{

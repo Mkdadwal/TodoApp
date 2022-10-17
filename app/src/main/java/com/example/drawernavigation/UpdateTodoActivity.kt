@@ -1,10 +1,12 @@
 package com.example.drawernavigation
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.example.drawernavigation.databinding.ActivityUpdateTodoBinding
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import java.util.*
@@ -12,32 +14,26 @@ import java.util.*
 class UpdateTodoActivity : AppCompatActivity() {
     val dataBase : FirebaseDatabase = FirebaseDatabase.getInstance()
     val refTodo : DatabaseReference = dataBase.reference.child("Todo")
-
-    lateinit var edtUpdateTitle : EditText
-    lateinit var edtUpdateAction : EditText
-    lateinit var update : Button
-    lateinit var remove : Button
+    private lateinit var binding: ActivityUpdateTodoBinding
     lateinit var id : String
     lateinit var title : String
     lateinit var task : String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_update_todo)
+        binding = ActivityUpdateTodoBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        edtUpdateTitle = findViewById(R.id.edtUpdateTitle)
-        edtUpdateAction = findViewById(R.id.edtUpdateAction)
-        update = findViewById(R.id.btnUpdateSubmit)
-        remove = findViewById(R.id.remove)
+
         id = intent.getStringExtra("id").toString()
         title = intent.getStringExtra("title").toString()
         task = intent.getStringExtra("task").toString()
-        edtUpdateTitle.setText(title).toString()
-        edtUpdateAction.setText(task).toString()
+        binding.edtUpdateTitle.setText(title).toString()
+        binding.edtUpdateAction.setText(task).toString()
 //        Toast.makeText(this,"Title : ${title}",Toast.LENGTH_SHORT).show()
-        update.setOnClickListener {
-            update.setBackgroundColor(Color.GREEN)
-            title=edtUpdateTitle.text.toString()
-            task=edtUpdateAction.text.toString()
+        binding.btnUpdateSubmit.setOnClickListener {
+            binding.btnUpdateSubmit.setBackgroundColor(Color.GREEN)
+            title=binding.edtUpdateTitle.text.toString()
+            task=binding.edtUpdateAction.text.toString()
             val userUpdate = mutableMapOf<String,Any>()
             userUpdate["id"] = id
             userUpdate["title"] = title
@@ -55,10 +51,10 @@ class UpdateTodoActivity : AppCompatActivity() {
         }
 
 
-        remove.setOnClickListener {
-            remove.setBackgroundColor(Color.RED)
-            edtUpdateTitle.setText("")
-            edtUpdateAction.setText("")
+        binding.remove.setOnClickListener {
+            binding.remove.setBackgroundColor(Color.RED)
+            binding.edtUpdateTitle.setText("")
+            binding.edtUpdateAction.setText("")
             refTodo.child(id).removeValue().addOnCompleteListener { mytask ->
                 if (mytask.isSuccessful) {
                     Toast.makeText(this@UpdateTodoActivity, "Removed Successfully", Toast.LENGTH_SHORT).show()
