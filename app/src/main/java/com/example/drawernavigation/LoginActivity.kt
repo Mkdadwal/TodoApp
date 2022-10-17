@@ -11,6 +11,7 @@ class LoginActivity : AppCompatActivity() {
     lateinit var username : EditText
     lateinit var password : EditText
     lateinit var login : Button
+    lateinit var register : Button
     lateinit var regex : Regex
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +19,7 @@ class LoginActivity : AppCompatActivity() {
         username = findViewById(R.id.username)
         password = findViewById(R.id.password)
         login = findViewById(R.id.btnLogin)
+        register = findViewById(R.id.btnRegister)
         login.setOnClickListener {
             regex = Regex("""\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}""")
             if(android.util.Patterns.EMAIL_ADDRESS.matcher(username.text).matches()){
@@ -26,6 +28,10 @@ class LoginActivity : AppCompatActivity() {
             else{
                 Toast.makeText(this,"Invalid Email", Toast.LENGTH_SHORT).show()
             }
+        }
+        register.setOnClickListener {
+            var intent = Intent(this,RegisterActivity::class.java)
+            startActivity(intent)
         }
     }
 }
