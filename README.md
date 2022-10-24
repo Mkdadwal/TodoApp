@@ -1,5 +1,5 @@
 # TodoApp
-This is a basic Todo app where you can add a task. In this app you can update or delete the task as per your needs.
+This is a basic Todo app where you can add a task. In this app you can update or delete the task as per your needs. And help you to track your daily tasks.
 
 ### Language :- Kotlin
 ### Framework :- Android Studio
@@ -11,7 +11,7 @@ This is a basic Todo app where you can add a task. In this app you can update or
 
 
 ## Login And Register Page 
-when any user opens the application it ask for Login.
+when any user opens the application it ask for Login. For tracking purpose
 Also added the feature of Forgot password in case any user forget their respectively login credentials.
 
 ![IMG-20221009-WA0014](https://user-images.githubusercontent.com/92742868/194869723-9137d809-14f1-4d7a-9d63-3cd9de27dc19.jpg)
