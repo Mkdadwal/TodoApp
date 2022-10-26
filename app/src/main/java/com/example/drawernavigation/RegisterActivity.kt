@@ -6,19 +6,18 @@ import android.provider.ContactsContract
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.example.drawernavigation.databinding.ActivityRegisterBinding
 
 class RegisterActivity : AppCompatActivity() {
-    lateinit var btnSubmit : Button
-    lateinit var email : EditText
+    private lateinit var binding: ActivityRegisterBinding
     lateinit var regex : Regex
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register)
-        btnSubmit = findViewById(R.id.btnSubmit)
-        email = findViewById(R.id.inputemail)
-        btnSubmit.setOnClickListener {
+        binding = ActivityRegisterBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.btnSubmit.setOnClickListener {
             regex = Regex("""\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}""")
-            if(android.util.Patterns.EMAIL_ADDRESS.matcher(email.text).matches()){
+            if(android.util.Patterns.EMAIL_ADDRESS.matcher(binding.inputemail.text).matches()){
                 Toast.makeText(this,"Registered Successfully",Toast.LENGTH_SHORT).show()
             }
             else{
